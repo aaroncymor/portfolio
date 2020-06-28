@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;1,700&family=Pangolin&display=swap');
+
+/* colors */
+//https://coolors.co/def2c8-c5dac1-bcd0c7-a9b2ac-898980
+
+$primary-color: #444440; //898980
+$secondary-color: #898980; // A9B2AC
+$tertiary-color: #BCD0C7;
+$optional-color-one: #c6e7bf; // C5DAC1
+$optional-color-two: #DEF2C8;
+
+/* fonts */
+$primary-font: 'Montserrat', sans-serif;
+$secondary-font: 'Pangolin', sans-serif;
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@mixin transition-ease {
+    transition: all 0.5s ease-in-out;
+}
+
+@mixin media-md {
+    @media screen and (min-width: 768px) {
+        @content;
+    }
+}
+
+@mixin media-lg {
+    @media screen and (min-width: 1024px) {
+        @content;
+    }
+}
+@mixin media-xl {
+    @media screen and (min-width: 1600px) {
+        @content;
+    }
+}

@@ -1,0 +1,15 @@
+.projects {
+    &__box {
+        background-color: $secondary-color;
+        padding: 1rem 2rem;
+        border-radius: 1rem; 
+    }
+
+    &__heading {
+        text-transform: uppercase;
+        text-align: center;
+        font-weight: 700;
+        font-size: 3em;
+        padding-bottom: 1rem;
+    }
+}

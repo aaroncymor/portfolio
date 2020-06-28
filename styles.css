@@ -1,0 +1,76 @@
+/*Import the fonts used*/
+
+/*Basic reset*/
+
+/*globals*/
+
+/*reusables*/
+
+
+.flex-container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    max-width: 120rem;
+    padding: 0;
+    margin: 0;
+}
+
+.box {
+    width: 100%;
+    position: relative;
+}
+
+/*about*/
+.box.aboutme {
+    background-color: blue;
+}
+
+/*skills*/
+.box.skillsets {
+    background-color: plum;
+}
+
+/*experience*/
+.box.experiences {
+    background-color: olive;
+}
+
+/* Media queries */
+
+@media screen and (min-width: 768px) {
+    .section {
+        height: 100vh;
+    }
+
+    .box {
+        width: 80%;
+        height: 50%;
+    }
+
+    .container {
+        position: relative;
+    }
+
+    /*about*/
+    .about .flex-container {
+        justify-content: center;
+        align-items: center;
+    }
+
+    /*skills*/
+    .box.skillsets {  
+        position: absolute;
+        left: 0;
+        top: 20%;
+    }
+
+    /*experiences*/
+    .box.experiences {
+        position: absolute;
+        right: 0;
+        top: 20%;
+    }
+
+    /*projects*/
+}

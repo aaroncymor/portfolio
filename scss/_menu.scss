@@ -1,0 +1,12 @@
+.menu-nav {
+    list-style-type: none;
+
+    &__link {
+        font-family: $primary-font;
+        font-size: 3rem;
+        text-decoration: none;
+        color: $optional-color-one;
+        text-transform: uppercase;
+        font-weight: 700;
+    }
+}

@@ -1,0 +1,51 @@
+.profile {
+
+    &__box {
+        background-color: $secondary-color;
+        padding: 1rem 2rem;
+        border-radius: 1rem;
+
+        p {
+            font-size: 1.4rem;
+        }
+    }
+
+    &__heading {
+        text-transform: uppercase;
+        text-align: center;
+        font-weight: 700;
+        font-size: 3em;
+        padding-bottom: 1rem;
+    }
+
+    &__img {
+        margin: 0 auto;
+        width: 10rem;
+        height: 10rem;
+        background-color: green;
+        border-radius: 44px;
+        margin-bottom: 2rem;
+    }
+
+    &__social-media ul {
+        list-style-type: none;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin-top: 1.2rem;
+    }
+
+    &__social-media ul li {
+        font-size: 2.2rem;
+    }
+
+    &__social-media ul li:not(:last-child) {
+        margin-right: 1.6rem;
+    }
+
+    &__social-media ul li a {
+        text-decoration: none;
+        color: $optional-color-two;
+    }
+
+}
