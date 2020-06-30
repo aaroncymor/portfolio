@@ -2,7 +2,9 @@
     &__box {
         background-color: $secondary-color;
         padding: 1rem 2rem;
-        border-radius: 1rem;        
+        border-radius: 1rem;
+        box-shadow: 5px 7px #151513;
+        overflow: hidden;
     }
 
     &__heading {
@@ -14,15 +16,25 @@
     }
 
     &__category {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0rem 2rem;
         margin-bottom: 1.5rem;
     }
 
     &__title {
         text-align: center;
-        font-size: 1.6rem;
+        font-size: 1.2rem;
     }
 
     &__item {
+        width: 100%;
+    }
+
+    &__bar {
         width: 100%;
         height: 100%;
         position: relative;
@@ -30,37 +42,53 @@
         overflow: hidden;
         cursor: pointer;
         z-index: 1;
+        border-radius: 8px;
+        background-color: $primary-color;
 
         p {
             font-weight: 500;
             font-size: 1.3rem;
             margin-left: 1rem;
         }
+    }
 
-        &::after {
-            content: '';
-            width: 100%;
-            height: 100%;
-            position:absolute;
-            background-color: $optional-color-two;
-            top: 0;
-            bottom: 0;
-            right: 100%;
-            opacity: 0;
-            @include transition-ease;
-        }
+    &__tags {
+        width: 100%;
+        ul {
+            list-style-type: none;
+            display: flex;
+            flex-flow: row wrap;
 
-        &:hover {
-            &::after {
-                right: 0;
-                opacity: 1;
-                z-index: -1;
-            }
+            li {
 
-            p {
-                color: $secondary-color;
+                margin: 0.3rem 1rem;
+                background-color: #000;
+                border-radius: 8px;
+                padding: 5px 2px;
+                font-size: 0.8rem;
+                text-transform: lowercase;
             }
         }
     }
 
+}
+
+#skills-html::after {
+    width: 90%;
+}
+
+#skills-css::after {
+    width: 60%;
+}
+
+#skills-javascript::after {
+    width: 70%;
+}
+
+#skills-python::after {
+    width: 80%;
+}
+
+#skills-php::after {
+    width: 40%;
 }

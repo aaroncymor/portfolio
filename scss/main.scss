@@ -1,4 +1,5 @@
 @import 'config';
+@import 'aos';
 @import 'menu';
 @import 'blog';
 @import 'profile';
@@ -9,13 +10,14 @@
 body {
     background-color: $primary-color;
     font-family: $primary-font;
+    letter-spacing: 2px;
 }
 
 section {
     padding: 1.5rem;
     width: 100%;
     height: 100%;
-    color: #DEF2C8;
+    color: $optional-color-two;
 }
 
 .header {

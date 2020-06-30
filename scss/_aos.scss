@@ -1,0 +1,83 @@
+[data-aos="skillbar-animation"] {
+    &::after {
+        content: '';
+        height: 100%;
+        position:absolute;
+        background-color: $optional-color-two;
+        top: 0;
+        bottom: 0;
+        right: 100%;
+        opacity: 0;
+        @include transition-ease;        
+    }
+    &.aos-animate::after {
+        opacity: 1;
+        z-index: -1;      
+    }
+
+    &.aos-animate#skills-html::after {
+        right: 10%;
+    }
+
+    &.aos-animate#skills-css::after {
+        right: 40%;  
+    }
+
+    &.aos-animate#skills-javascript::after {
+        right: 30%;       
+    }
+
+    &.aos-animate#skills-python::after {
+        right: 20%;       
+    }
+
+    &.aos-animate#skills-php::after {
+        right: 60%;    
+    }
+
+    &.aos-animate p {
+        color: $secondary-color;
+    }
+}
+
+[data-aos="experience-box-animation"] {
+    &::after {
+        content: '';
+        height: 100%;
+        width: 4%;
+        background-color: $optional-color-one;
+        position: absolute;
+        right: 100%;
+        bottom: 0;
+        top: 0;
+        opacity: 0;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+        @include transition-ease;
+    }
+
+    &.aos-animate::after {
+        opacity: 1;
+        right: 97%;
+    }
+}
+
+[data-aos="arrow-animation"] {
+    &::before {
+        content: '';
+        position:absolute;
+        width: 10%;
+        height: 3.2%;
+        right: 100%;
+        border-top: 13px solid transparent;
+        border-bottom: 13px solid transparent;
+        border-left: 20px solid $optional-color-one;
+        opacity: 0;
+        @include transition-ease;
+    }
+
+    &.aos-animate::before {
+        opacity: 1;
+        right: 88%;       
+    }
+}

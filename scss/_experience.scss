@@ -2,36 +2,10 @@
     &__box {
         background-color: $secondary-color;
         padding: 1rem 2rem;
-        border-radius: 1rem;  
+        border-radius: 1rem;
         position: relative;
         overflow: hidden;
-
-        &::after {
-            content: '';
-            height: 100%;
-            width: 4%;
-            background-color: $optional-color-one;
-            position: absolute;
-            right: 100%;
-            bottom: 0;
-            top: 0;
-            opacity: 0;
-            border-top-left-radius: 10px;
-            border-bottom-left-radius: 10px;
-            @include transition-ease;
-        }
-
-        &:hover {
-            &::after {
-                opacity: 1;
-                right: 97%;
-            }
-
-            .experience__company::before {
-                opacity: 1;
-                right: 88%;
-            }
-        }
+        box-shadow: 5px 7px #151513;
     }
 
     &__heading {
@@ -53,28 +27,5 @@
         width: 100%;
         height: 100%;
         overflow: hidden;
-
-        &::before {
-            content: '';
-
-            position:absolute;
-            width: 10%;
-            height: 3.2%;
-            right: 100%;
-            border-top: 13px solid transparent;
-            border-bottom: 13px solid transparent;
-            border-left: 20px solid $optional-color-one;
-            opacity: 0;
-            @include transition-ease;
-        }
     }
-}
-
-
-@for $i from 1 through 4 {
-    /*.experience__list {
-        div:nth-child(#{$i}) h3::before {
-            transition-delay: ($i * 0.1s) + 0.15s;
-        }
-    }*/
 }

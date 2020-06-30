@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Aaron Cymor</title>
     <!--Font awesome CDN-->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
@@ -43,9 +44,9 @@
     <main>
         <section class="profile">
             <div class="container profile__box">
-                <h2 class="profile__heading">Profile</h2>
                 <div class="profile__img">
                 </div>
+                <h1 class="profile__intro">Hi, I am <span>Aa</span></h1>
                 <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus fermentum ante sit amet magna pretium rhoncus. Ut viverra posuere bibendum.
                 </p>
@@ -81,58 +82,64 @@
                 <div class="skills__list">
                     <div class="skills__category">
                         <h3 class="skills__title">Frontend</h3>
-                        <div class="skills__item">
+                        <div id="skills-html" class="skills__bar" data-aos="skillbar-animation">
                             <p>
                                 <i class="fab fa-html5"></i>
                                 HTML 
-                             </p>
+                            </p>
                         </div>
-                        <div class="skills__item">
+                        <div id="skills-css" class="skills__bar" data-aos="skillbar-animation">
                             <p>
                                 <i class="fab fa-css3-alt"></i>
                                 CSS 
-                             </p>
+                            </p>
                         </div>
-                        <div class="skills__item">
+                        <div id="skills-javascript" class="skills__bar" data-aos="skillbar-animation">
                             <p>
                                 <i class="fab fa-js-square"></i>
                                 Javascript 
-                             </p>
+                            </p>
                         </div>
                     </div>
                     <div class="skills__category">
                         <h3 class="skills__title">Backend</h3>
-                        <div class="skills__item">
+                        <div id="skills-python" class="skills__bar" data-aos="skillbar-animation">
                             <p>
                                 <i class="fab fa-python"></i>
                                 Python 
-                             </p>
+                            </p>
                         </div>
-                        <div class="skills__item">
+                        <div id="skills-php" class="skills__bar" data-aos="skillbar-animation">
                             <p>
                                 <i class="fab fa-php"></i>
                                 PHP
                             </p>
                         </div>
                     </div>
-                    <div class="skills__category">
-                        <h3 class="skills__title">Content Management</h3>
-                        <div class="skills__item">
-                            <p class="">
-                                <i class="fab fa-wordpress"></i>
-                                Wordpress 
-                            </p>
-                        </div>
-                    </div>
+                </div>
+                <div class="skills__tags">
+                    <ul data-aos="fade-up">
+                        <li>Django</li>
+                        <li>Django-rest</li>
+                        <li>Celery</li>
+                        <li>PySerial</li>
+                        <li>Scss</li>
+                        <li>jQuery</li>
+                        <li>Angular</li>
+                        <li>Wordpress</li>
+                        <li>aws</li>
+                        <li>Big-Query</li>
+                        <li>Linux</li>
+                    </ul>
                 </div>
             </div>
         </section>
         <section class="experience">
-            <div class="container experience__box">
+            <div class="container experience__box" data-aos="experience-box-animation">
                 <h2 class="experience__heading">Experience</h2>
                 <div class="experience__list">
                     <div class="experience__item">
-                        <h3 class="experience__company">
+                        <h3 class="experience__company" data-aos="arrow-animation">
                             Rising Tide Digital Inc.
                         </h3>
                         <h5>Jan 2018 - Present</h5>
@@ -141,7 +148,7 @@
                         </p>
                     </div>
                     <div class="experience__item">
-                        <h3 class="experience__company">
+                        <h3 class="experience__company" data-aos="arrow-animation">
                             FX Systems Ltd.
                         </h3>
                         <h5>May 2016 - July 2016</h5>
@@ -150,7 +157,7 @@
                         </p>
                     </div>
                     <div class="experience__item">
-                        <h3 class="experience__company">
+                        <h3 class="experience__company" data-aos="arrow-animation">
                             UP ITDC
                         </h3>
                         <h5>Jan 2015 - Nov 2015</h5>
@@ -159,7 +166,7 @@
                         </p>
                     </div>
                     <div class="experience__item">
-                        <h3 class="experience__company">
+                        <h3 class="experience__company" data-aos="arrow-animation">
                             Hewlett Packard
                         </h3>
                         <h5>Feb 2012 - Dec 2014</h5>
@@ -170,12 +177,21 @@
                 </div>
             </div>
         </section>
-        <section class="projects" id="projects">
-            <div class="container projects__box">
-                <h2 class="projects__heading">Projects</h2>
-                <div class="projects__list">
-                    <div class="projects__item">
-                        
+        <section class="project" id="project">
+            <div class="container project__box">
+                <h2 class="project__heading">Projects</h2>
+                <div class="project__list">
+                    <div data-aos="fade-up" class="project__item">
+                        <!--<img src="images/project-1.jpg" alt="">-->
+                        <h3 class="project__name">Red Bull</h3>
+                    </div>
+                    <div data-aos="fade-up" class="project__item">
+                        <!--<img src="images/project-2.jpg" alt="">-->
+                        <h3 class="project__name">Sunkist</h3>
+                    </div>
+                    <div data-aos="fade-up" class="project__item">
+                        <!--<img src="images/project-3.jpg" alt="">-->
+                        <h3 class="project__name">Rising Tide Digital</h3>
                     </div>
                 </div>
             </div>
@@ -185,6 +201,7 @@
         &copy; Aaron Cymor 2020
     </footer>
     <script src="https://kit.fontawesome.com/6d2ea823d0.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>
