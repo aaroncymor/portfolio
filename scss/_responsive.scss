@@ -1,0 +1,58 @@
+@include media-md {
+
+    .projects {
+        &__list {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+}
+
+@include media-lg {
+
+    .box {
+        background-color: #000 !important;
+    }
+
+    .skills {
+        .wrapper {
+            display: inline-flex;
+        }
+
+        &__list {
+            height: 100%;
+            flex: 2;
+            background-color: $optional-color-one;
+            margin: 0 0.8rem;
+        }
+
+        &__tags {
+            height: 100%;
+            flex: 1;
+        }
+    }
+
+    .experience {
+        &__list {
+            display: flex;
+            flex-flow: column wrap;
+            align-items: center;
+        }
+
+        &__item {
+            min-height: 50vh;
+            width: 50vw;
+            background-color: $optional-color-one;
+        }
+    }
+
+    .projects {
+        &__list {
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 2rem;
+        }
+
+        &__item {
+            height: 40vh;
+        }
+    }
+}

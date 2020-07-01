@@ -1,17 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;1,700&family=Pangolin&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Lato:wght@300;400;700;900&family=Montserrat:wght@300;400;500;600;700&display=swap');
 
 /* colors */
 //https://coolors.co/def2c8-c5dac1-bcd0c7-a9b2ac-898980
 
-$primary-color: #444440; //898980
-$secondary-color: #898980; // A9B2AC
-$tertiary-color: #BCD0C7;
-$optional-color-one: #c6e7bf; // C5DAC1
-$optional-color-two: #C5DAC1;
+$primary-color: #353531; //898980
+$secondary-color: #242422; // A9B2AC
+$tertiary-color: rgba(146, 205, 244, 0.2);;
+$optional-color-one: rgba(36, 36, 34, 0.4); // C5DAC1
+$optional-color-two: #92CDF4; // 
 
 /* fonts */
 $primary-font: 'Montserrat', sans-serif;
-$secondary-font: 'Pangolin', sans-serif;
+$secondary-font: 'Inter', sans-serif;
 
 *,
 *::before,
@@ -25,19 +25,30 @@ $secondary-font: 'Pangolin', sans-serif;
     transition: all 0.5s ease-in-out;
 }
 
+@mixin media-xs {
+    // Medium devices (landscape tablets, 768px and up)
+    @media only screen and (max-width: 600px) {
+        @content;
+    }
+}
+
 @mixin media-md {
-    @media screen and (min-width: 768px) {
+    // Medium devices (landscape tablets, 768px and up)
+    @media only screen and (min-width: 768px) {
         @content;
     }
 }
 
 @mixin media-lg {
-    @media screen and (min-width: 1024px) {
+    // Large devices (laptops/desktops, 1024px and up)
+    @media only screen and (min-width: 1024px) {
         @content;
     }
 }
+
 @mixin media-xl {
-    @media screen and (min-width: 1600px) {
+    // Extra large devices (large laptops and desktops, 1600px and up)
+    @media only screen and (min-width: 1600px) {
         @content;
     }
 }
