@@ -1,5 +1,6 @@
 @import 'config';
 @import 'aos';
+@import 'loader';
 @import 'menu';
 @import 'blog';
 @import 'profile';
@@ -12,6 +13,7 @@ body {
     background-color: #000;
     font-family: $primary-font;
     letter-spacing: 2px;
+    // overflow: hidden;
 }
 
 section {
@@ -52,4 +54,12 @@ section {
     left: 0;
     color: #fff;
     background-color: #252523;
+}
+
+.highlight {
+    font-weight: 900;
+}
+
+.hide {
+    opacity: 0.3;
 }

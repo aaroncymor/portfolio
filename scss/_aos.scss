@@ -1,42 +1,7 @@
-[data-aos="skillbar-animation"] {
-    &::after {
-        content: '';
-        height: 100%;
-        position:absolute;
-        background-color: $optional-color-two;
-        top: 0;
-        bottom: 0;
-        right: 100%;
+[data-aos="loader-animation"] {  
+    &.aos-animate {
         opacity: 0;
-        @include transition-ease;        
-    }
-    &.aos-animate::after {
-        opacity: 1;
-        z-index: -1;      
-    }
-
-    &.aos-animate#skills-html::after {
-        right: 10%;
-    }
-
-    &.aos-animate#skills-css::after {
-        right: 40%;  
-    }
-
-    &.aos-animate#skills-javascript::after {
-        right: 30%;       
-    }
-
-    &.aos-animate#skills-python::after {
-        right: 20%;       
-    }
-
-    &.aos-animate#skills-php::after {
-        right: 60%;    
-    }
-
-    &.aos-animate p {
-        color: $secondary-color;
+        // top: -110%;
     }
 }
 
@@ -58,6 +23,16 @@
         opacity: 1;
         right: 97%;
     }
+
+    @include media-lg {
+        &::after {
+
+        }
+
+        &.aos-animate::after {
+            opacity: 0;
+        }
+    }
 }
 
 [data-aos="arrow-animation"] {
@@ -65,7 +40,6 @@
         content: '';
         position:absolute;
         width: 10%;
-        height: 3.2%;
         right: 100%;
         border-top: 13px solid transparent;
         border-bottom: 13px solid transparent;
@@ -77,5 +51,12 @@
     &.aos-animate::before {
         opacity: 1;
         right: 88%;       
+    }
+
+    @include media-lg {
+
+        &.aos-animate::before {
+            opacity: 0;
+        }
     }
 }
