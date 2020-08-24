@@ -46,7 +46,6 @@ section {
     padding: 1rem 2rem;
 }
 
-
 .footer {
     height: 50vh;
     width: 100%;
@@ -60,6 +59,10 @@ section {
     font-weight: 900;
 }
 
-.hide {
+.inactive {
     opacity: 0.3;
+}
+
+.enlarge {
+    transform: scale(1.3);
 }

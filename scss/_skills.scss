@@ -28,15 +28,11 @@
     }
 
     &__card {
+        transition: ease-in-out;
 
         p {
             text-align: center;
             cursor: pointer;
-
-            &:hover {
-                transition: 250ms;
-                transform: scale(1.2);
-            }
         }
 
         span {
