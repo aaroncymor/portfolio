@@ -7,72 +7,64 @@
     &__heading {
         text-transform: uppercase;
         text-align: center;
+        font-family: $secondary-font;
         font-weight: 700;
-        font-size: 2em;
+        font-size: 2.5em;
         padding-bottom: 1rem;
     }
 
-    &__list {
-        width: 65vw;
+    &__highlights {
         margin: 2rem auto 0 auto;
         display: grid;
         grid-template-columns: 1fr;
         grid-gap: 1rem;
     }
 
-    &__item {
+    &__card {
         position: relative;
+        height: 16.4rem;
+    }
+
+    &__name {
+        text-align: center;
+    }
+
+    &__front {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
         cursor: pointer;
-        height: 300px;
-        margin: 2rem 0;
-        width: 100%;
-        border-radius: 1rem;
-        color: $optional-color-two;
-        overflow: hidden;
-        @include transition-ease;
+        background: grey;
+        height: 100%;
+
+        // transform: scale(0.7) translateY(-80%);
+        
+        i {
+            font-size: 3.8em;
+        }
 
         img {
             width: 100%;
             height: 100%;
         }
-
-        &.active {
-            .projects__story {
-                top: 10%;
-                transform: translateY(0%);
-            }
-        }
     }
 
-    &__name {
+    &__back {
+        display: none;
+        position: absolute;
+    }
+
+    &__background {
+        display: none;
         position: absolute;
         top: 0;
-        left: 1rem;
-        color: #fff;
-    }
-
-    &__story {
-        color: #000;
-        font-family: 'Lato', sans-serif;
-        height: 100%;
-        position: absolute;
-        z-index: 1;
-        background: #fff;
-        right: 0;
-        left: 0;
         bottom: 0;
-        transform: translateY(90%);
-
-        @include transition-ease;
-
-        p:nth-child(1){
-            text-align: center;
-            padding-bottom: 1rem;
-            font-weight: 700;
-        }
-
-        p:nth-child(2){
-            padding: 10px;
-        }
+        left: 0;
+        right: 0;
+        background: white;
+        transform: scale(0.2, 0.5);
+        transition: 250ms;
+        border-radius: 22px;
     }
 }

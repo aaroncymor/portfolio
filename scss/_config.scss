@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Lato:wght@300;400;700;900&family=Montserrat:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Passion+One:wght@400;700;900&family=Poppins:wght@400;700;900&family=Roboto:ital,wght@0,400;0,500;0,900;1,700&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Montserrat:wght@400;700;900&family=Nunito:wght@400;700;900&display=swap');
 
 /* colors */
 //https://coolors.co/def2c8-c5dac1-bcd0c7-a9b2ac-898980
@@ -10,8 +11,8 @@ $optional-color-one: rgba(36, 36, 34, 0.4); // C5DAC1
 $optional-color-two: #92CDF4; // 
 
 /* fonts */
-$primary-font: 'Montserrat', sans-serif;
-$secondary-font: 'Inter', sans-serif;
+$primary-font: 'Poppins', sans-serif;
+$secondary-font: 'Roboto', sans-serif;
 
 *,
 *::before,

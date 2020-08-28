@@ -14,19 +14,19 @@
     <header class="header">
         <div class="container">
             <nav class="nav">
-                <a href="index.html" class="nav__logo">
-                    <img src="" alt="" />
-                </a>
+                <!-- <a href="index.html" class="nav__logo">
+                    Aaron Cymor
+                </a> -->
                 <div class="nav__burger">
                     <i class="fas fa-bars"></i>
                     <i class="fas fa-times"></i>
                 </div>
                 <ul class="menu-nav">
-                    <li class="menu-nav__item">
+                    <!-- <li class="menu-nav__item">
                         <a href="#" class="menu-nav__link">Blog</a>
-                    </li>
+                    </li> -->
                     <li class="menu-nav__item">
-                        <a href="#" class="menu-nav__link">Profile</a>
+                        <a href="#" class="menu-nav__link active">About</a>
                     </li>
                     <li class="menu-nav__item">
                         <a href="#" class="menu-nav__link">Skills</a>
@@ -53,25 +53,31 @@
         <section class="profile">
             <div class="container box">
                 <div class="wrapper">
-                    <div class="profile__img">
+                    <div class="image-border">
+                        <img class="profile__img" src="/dist/images/itsme.png" alt="">
                     </div>
                     <h2 class="profile__intro">Hi, I am <span>Aa</span></h2>
                 </div>
                 <div class="wrapper">
-                    <p>
-                        I have developed a passion to create things
-                        software.
+                    <p class="profile__message">
+                        I love learning <span>software development</span>! I started as 
+                        an ITIL practitioner, completing and/or solving tickets 
+                        end-to-end. Eventually, I decided to shift to programming,
+                        since this is what I want! I always give myself time 
+                        to study new technologies, especially if it peaks
+                        my interest. I have 3 years of work experience with great
+                        thirst for knowledge!
                     </p>
                     <div class="profile__social-media">
                         <ul>
                             <li>
-                                <a href="#">
-                                    <i class="fab fa-linkedin"></i>
+                                <a target="_blank" href="https://www.linkedin.com/in/aaron-cymor-neme%C3%B1o-4b353922/">
+                                    <i class="fab fa-linkedin-in"></i>
                                 </a>
                             </li>
                             <li>
-                                <a href="#">
-                                    <i class="fab fa-github-square"></i>
+                                <a target="_blank" href="https://github.com/aaroncymor">
+                                    <i class="fab fa-github"></i>
                                 </a>
                             </li>
                         </ul>
@@ -83,22 +89,25 @@
             <div class="container box">
                 <h2 class="skills__heading">Skills</h2>
                 <div class="wrapper">
+                    <!-- <p class="skills__message">
+                        Here are the arrays of skills I have.
+                    </p> -->
                     <div class="skills__list">
                         <h3 class="skills__title">Frontend</h3>
                         <div class="skills__category">
-                            <div class="skills__card">
+                            <div class="skills__item">
                                 <p class="skills__html5">
                                     <i class="fab fa-html5"></i> 
                                     <span>HTML</span>
                                 </p>
                             </div>
-                            <div class="skills__card">
+                            <div class="skills__item">
                                 <p class="skills__css">
                                     <i class="fab fa-css3-alt"></i>
                                     <span>CSS</span> 
                                 </p>
                             </div>
-                            <div class="skills__card">
+                            <div class="skills__item">
                                 <p class="skills__js">
                                     <i class="fab fa-js-square"></i>
                                     <span>Javascript</span> 
@@ -107,19 +116,19 @@
                         </div>
                         <h3 class="skills__title">Backend</h3>
                         <div class="skills__category">
-                            <div class="skills__card">
+                            <div class="skills__item">
                                 <p class="skills__python">
                                     <i class="fab fa-python"></i>
                                    <span>Python</span> 
                                 </p>
                             </div>
-                            <div class="skills__card">
+                            <div class="skills__item">
                                 <p class="skills__php">
                                     <i class="fab fa-php"></i>
                                     <span>PHP</span>
                                 </p>
                             </div>
-                            <div class="skills__card">
+                            <div class="skills__item">
                                 <p class="skills__sql">
                                     <i class="fas fa-database"></i>
                                     <span>SQL</span>
@@ -128,19 +137,19 @@
                         </div>
                         <h3 class="skills__title">Others</h3>
                         <div class="skills__category">
-                            <div class="skills__card">
+                            <div class="skills__item">
                                 <p class="skills__devops">
                                     <i class="fas fa-infinity"></i>
                                     <span>Dev Ops</span>               
                                 </p>
                             </div>
-                            <div class="skills__card">
+                            <div class="skills__item">
                                 <p class="skills__os">
                                     <i class="fas fa-desktop"></i>
                                     <span>OS</span>               
                                 </p>
                             </div>
-                            <div class="skills__card">
+                            <div class="skills__item">
                                 <p class="skills__mobile">
                                     <i class="fas fa-mobile-alt"></i>
                                     <span>Mobile</span>               
@@ -173,66 +182,87 @@
         </section>
         <section class="experience">
             <div class="container box" data-aos="experience-box-animation">
-                <h2 class="experience__heading">Experience</h2>
-                <div class="experience__list">
-                    <div class="experience__item">
-                        <h3 class="experience__company" data-aos="arrow-animation">
-                            Rising Tide Digital Inc.
-                        </h3>
-                        <h5>Jan 2018 - Present</h5>
-                        <p>
-                            <span>Full Stack developer.</span>
-                            I have been involved in various projects working
-                            with clients like Sunkist, Redbull, and SM. All
-                            applications we develop are supported end-to-end, 
-                            from planning, development, deployment and 
-                            day to day assistance.
-                        </p>
+                <h2 class="experience__heading">Experiences</h2>
+                <div class="experience__list timeline">
+                    <div class="experience__item timeline--single">
+                        <div class="timeline--details">
+                            <h3 class="experience__company" data-aos="arrow-animation">
+                                Rising Tide Digital Inc.
+                            </h3>
+                            <h5>Jan 2018 - Present</h5>
+                            <p>
+                                <span>Full Stack developer.</span>
+                                I have been involved in various projects working
+                                with clients like Sunkist, Redbull, and SM. All
+                                applications we develop are supported end-to-end, 
+                                from planning, development, deployment and 
+                                day to day assistance.
+                            </p>
+                        </div>
+                        <span class="time--date reverse">
+                            January 2018 - Present
+                        </span>
                     </div>
-                    <div class="experience__item">
-                        <h3 class="experience__company" data-aos="arrow-animation">
-                            FX Systems Ltd.
-                        </h3>
-                        <h5>May 2016 - July 2016</h5>
-                        <p>
-                            <span>Java Developer.</span>
-                            Demonstrated knowledge in web development by 
-                            continously making improvements and bug fixes
-                            both in frontend and backend of the company's
-                            web application, which is written in Java and
-                            uses Spring as framework.
-                        </p> 
+                    <div class="experience__item timeline--single">
+                        <span class="time--date">
+                            April 2016 - June 2016
+                        </span>
+                        <div class="timeline--details reverse">
+                            <h3 class="experience__company" data-aos="arrow-animation">
+                                FX Systems Ltd.
+                            </h3>
+                            <h5>Apr 2016 - Jun 2016</h5>
+                            <p>
+                                <span>Java Developer.</span>
+                                Demonstrated knowledge in web development by 
+                                continously making improvements and bug fixes
+                                both in frontend and backend of the company's
+                                web application, which is written in Java and
+                                uses Spring as framework.
+                            </p>                             
+                        </div>
+
                     </div>
-                    <div class="experience__item">
-                        <h3 class="experience__company" data-aos="arrow-animation">
-                            UP ITDC
-                        </h3>
-                        <h5>Jan 2015 - Nov 2015</h5>
-                        <p>
-                            <span>PHP Developer.</span>
-                            Developed and supported wordpress site of
-                            our client. Utilized knowledge in MVC and
-                            integrated that to the website, with the help
-                            of WP-MVC plugin to develop webpages that
-                            showcases the country's industries and 
-                            uses high maps JS to highlight its regions
-                            per active industry.
-                        </p>
+                    <div class="experience__item timeline--single">
+                        <div class="timeline--details">
+                            <h3 class="experience__company" data-aos="arrow-animation">
+                                UP ITDC
+                            </h3>
+                            <h5>Feb 2015 - Oct 2015</h5>
+                            <p>
+                                <span>PHP Developer.</span>
+                                Developed and supported wordpress site of
+                                our client. Utilized knowledge in MVC and
+                                integrated that to the website, with the help
+                                of WP-MVC plugin to develop webpages that
+                                showcases the country's industries and 
+                                uses high maps JS to highlight its regions
+                                per active industry.
+                            </p>
+                        </div>
+                        <span class="time--date reverse">
+                            February 2015 - October 2015
+                        </span>
                     </div>
-                    <div class="experience__item">
-                        <h3 class="experience__company" data-aos="arrow-animation">
-                            Hewlett Packard
-                        </h3>
-                        <h5>Feb 2012 - Dec 2014</h5>
-                        <p>
-                            <span>Technology Consultant.</span>
-                            Level 1 support team for various applications
-                            of P&G. I have successfully completed and resolved
-                            thousands of requests, and incidents. Became a report 
-                            owner and an  SME (Subject Matter Expert) of one of 
-                            the largest applications guiding newcomers to solve 
-                            their own tickets.
-                        </p>
+                    <div class="experience__item timeline--single">
+                        <span class="time--date">
+                            February 2012 - December 2014
+                        </span>
+                        <div class="timeline--details reverse">
+                            <h3 class="experience__company" data-aos="arrow-animation">
+                                Hewlett Packard
+                            </h3>
+                            <h5>Feb 2012 - Dec 2014</h5>
+                            <p>
+                                <span>Technology Consultant.</span>
+                                Level 1 support team for various applications
+                                of P&G. I have successfully completed and resolved
+                                thousands of requests, and incidents. Became a report 
+                                owner and an  SME (Subject Matter Expert) of one of 
+                                the largest applications guiding newcomers to solve 
+                                their own tickets.
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -240,30 +270,42 @@
         <section class="projects" id="projects">
             <div class="container box">
                 <h2 class="projects__heading">Projects</h2>
-                <div class="projects__list">
-                    <div data-aos="fade-up" class="projects__item">
-                        <img src="images/project-3.jpg" alt="">
-                        <h3 class="projects__name">Rising Tide Digital</h3>
-                        <div class="projects__story">
+                <div class="projects__highlights">
+                    <div data-aos="fade-up" class="projects__card">
+                        <div class="projects__front">
+                            <img src="/dist/images/rt-web.png" alt="" class="projects__img">
+                            <!-- <i class="far fa-window-maximize"></i>
+                            <h3 class="projects__name">Rising Tide Digital</h3> -->
+                        </div>
+                        <!-- <div class="projects__back">
                             <p>About <i class="fas fa-chevron-up"></i></p>
                             <div class="projects__source">
-                                <i class="fas fa-eye"></i>
-                                View Site
+                                <a target="_blank"
+                                    href="https://www.risingtide.ph">
+                                    <i class="fas fa-eye"></i>
+                                    View Site
+                                </a>
                             </div>                            
                             <p>
                                 Website with wordpress for the company.
                                 Main responsibility was the UI of the site.
                             </p>
-                        </div>
+                        </div> -->
                     </div>
-                    <div data-aos="fade-up" class="projects__item">
-                        <img src="images/project-2.jpg" alt="">
-                        <h3 class="projects__name">Sunkist</h3>
-                        <div class="projects__story">
+                    <div data-aos="fade-up" class="projects__card">
+                        <div class="projects__front">
+                            <img src="/dist/images/sunkist-web.png" alt="" class="projects__img">
+                            <!-- <i class="far fa-window-maximize"></i>
+                            <h3 class="projects__name">Sunkist Myanmar</h3> -->
+                        </div>
+                        <!-- <div class="projects__back">
                             <p>About <i class="fas fa-chevron-up"></i></p>
                             <div class="projects__source">
-                                <i class="fas fa-eye"></i>
-                                View Site
+                                <a target="_blank"
+                                    href="https://sunkistmyanmar.com">
+                                    <i class="fas fa-eye"></i>
+                                    View Site
+                                </a>
                             </div>
                             <p>
                                 CMS that allows our client to exchange
@@ -273,48 +315,61 @@
                                 around 1500 users, and 100 - 200 transactions daily 
                                 as per Google analytics.
                             </p>
-                        </div>
+                        </div> -->
                     </div>
-                    <div data-aos="fade-up" class="projects__item">
-                        <img src="images/project-1.jpg" alt="">
-                        <h3 class="projects__name">Red Bull</h3>
-                        <div class="projects__story">
+                    <div data-aos="fade-up" class="projects__card">
+                        <div class="projects__front">
+                            <img src="/dist/images/redbullmm-web.png" alt="" class="projects__img">
+                            <!-- <i class="fas fa-cogs"></i>
+                            <h3 class="projects__name">RedBull Myanmar</h3> -->
+                        </div>
+                        <!-- <div class="projects__back">
                             <p>About <i class="fas fa-chevron-up"></i></p>
                             <div class="projects__source">
-                                <i class="fas fa-eye"></i>
-                                View Site
+                                <a target="_blank"
+                                    href="https://redbullmm.com/">
+                                    <i class="fas fa-eye"></i>
+                                    View Site
+                                </a>
                             </div>
                             <p>
-                                Daemons to communicate with GSM modules
-                                which issues commands to top-up winners 
-                                who won codes from cans, and bottles.
-                                The application had around 1200 transactions 
-                                daily.
+                                Web service and daemons which receives requests
+                                from our chatbot communicates with GSM modules 
+                                and 3rd party API to top-up winners. The application 
+                                had around 1200 - 1500 transactions daily.
                             </p>
-                        </div>
+                        </div> -->
                     </div>
-                    <div data-aos="fade-up" class="projects__item">
-                        <img src="images/project-1.jpg" alt="">
-                        <h3 class="projects__name">Twitter Sentiment Analysis</h3>
-                        <div class="projects__story">
+                    <div data-aos="fade-up" class="projects__card">
+                        <div class="projects__front">
+                            <!-- <i class="fas fa-mobile-alt"></i>
+                            <h3 class="projects__name">Twitter Sentiment Analysis</h3> -->
+                        </div>
+                        <!-- <div class="projects__back">
                             <p>About <i class="fas fa-chevron-up"></i></p>
                             <div class="projects__source">
-                                <i class="fab fa-github-alt"></i>
-                                View Source Code
+                                <a target="_blank"
+                                    href="https://github.com/aaroncymor/flutter-twitter-sentiment-analysis">
+                                    <i class="fab fa-github-alt"></i>
+                                    View Source Code
+                                </a>
                             </div>
                             <p>
-                                Originally a web project from my training. Recreated
-                                with Flutter which gets scores of tweets, and generates 
-                                charts for most used words, and hashtags.
+                                Originally a web project from my bootcamp. Decided to
+                                develop with Flutter. This gets scores of tweets, and 
+                                generates charts for most used words, and hashtags.
                             </p>
-                        </div>
+                        </div> -->
                     </div>
+                </div>
+                <div class="projects__others">
+
                 </div>
             </div>
         </section>
     </main>
     <footer class="footer">
-        &copy; Aaron Cymor 2020
+        <p>&copy; Aaron Cymor 2020</p>
     </footer>
     <script src="https://kit.fontawesome.com/6d2ea823d0.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>

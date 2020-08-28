@@ -10,7 +10,7 @@
 @import 'responsive';
 
 body {
-    background-color: #000;
+    background: #252525;
     font-family: $primary-font;
     letter-spacing: 2px;
     // overflow: hidden;
@@ -20,7 +20,7 @@ section {
     padding: 1.5rem;
     width: 100%;
     height: 100%;
-    color: $optional-color-two;
+    color: hsla(0,0%,100%,.85);//$optional-color-two;
 }
 
 .header {
@@ -29,6 +29,7 @@ section {
     height: 100%;
     background: $primary-color;
     right: -26rem;
+    z-index: 1000;
 }
 
 .header.open {
@@ -47,22 +48,27 @@ section {
 }
 
 .footer {
-    height: 50vh;
     width: 100%;
     position: absolute;
     left: 0;
     color: #fff;
     background-color: #252523;
+
+    p {
+        text-align: center;
+    }
 }
 
 .highlight {
     font-weight: 900;
+    color: $optional-color-two;
 }
 
 .inactive {
-    opacity: 0.3;
+    opacity: 0.2;
 }
 
 .enlarge {
     transform: scale(1.3);
+    color: $optional-color-two;
 }
