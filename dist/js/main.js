@@ -77,13 +77,35 @@ setInterval(()=>{
     }
 }, 5000);
 
-const projectItems = document.querySelectorAll('.projects__item');
+const projectCards = document.querySelectorAll('.projects__card');
+projectCards.forEach((projectCard, index)=>{
+    projectCard.addEventListener('click', (e)=>{
+        // projects__img -> projects__body -> projects__card attribute 'target'
+        var projectItemID = e.target.parentElement.parentElement.dataset.target;
+        var projectItem = document.querySelector(projectItemID);
+        projectItem.style.display = "flex";
+        window.setTimeout(()=>{
+            projectItem.classList.add("enter");
+            document.body.style.overflow = "hidden";
+        }, 300);
+    });
+});
+
+const projectItems = document.querySelectorAll('.project-item');
 projectItems.forEach((projectItem, index) => {
-    projectItem.addEventListener('click', (e)=>{
-        if (e.target.parentElement.classList.contains("projects__story")) {
-            e.target.parentElement.parentElement.classList.toggle("active");
-        } else {
-            e.target.parentElement.classList.toggle("active");           
-        }
+    projectItem.style.display = "none";
+});
+
+const projectCloses = document.querySelectorAll('.project-close');
+projectCloses.forEach((projectClose, index)=>{
+    projectClose.addEventListener('click', (e)=>{
+        e.preventDefault();
+        // project-close -> project-parent-container -> project-item
+        var projectItem = e.target.parentElement.parentElement;
+        document.body.style.overflow = "auto";
+        window.setTimeout(()=>{
+            projectItem.classList.remove("enter");
+        }, 300);
+        projectItem.style.display = "none";
     });
 });

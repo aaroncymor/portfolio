@@ -23,13 +23,14 @@
     &__card {
         position: relative;
         height: 16.4rem;
+        cursor: pointer;
     }
 
     &__name {
         text-align: center;
     }
 
-    &__front {
+    &__body {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -50,21 +51,71 @@
         }
     }
 
-    &__back {
-        display: none;
-        position: absolute;
-    }
+}
 
-    &__background {
-        display: none;
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        background: white;
-        transform: scale(0.2, 0.5);
-        transition: 250ms;
-        border-radius: 22px;
+/* Project Pop up*/
+
+.project-item {
+    background: #0F0326;
+    z-index: 99999;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: scale(.6);
+    opacity: 0;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform .375s cubic-bezier(.165,.84,.44,1),opacity .375s ease-in-out,border-radius .375s ease-in-out;
+    color: #FFFF82;
+
+    &.enter {
+        flex-direction: column;
+        gap: 2em;
+        border-radius: 0;
+        opacity: 1;
+        transform: scale(1);
+        transition: transform .375s cubic-bezier(1,0,0,1),opacity .375s ease-in-out,border-radius .375s ease-in-out !important;
+        overflow-y: auto;        
     }
+}
+
+.project-parent-container {
+    height: 100%;
+    width: 80%;
+    margin: auto;
+}
+
+.project-content {
+    h4 {
+        text-align: center;
+    }
+}
+
+.project-visit {
+    display: block;
+    margin: 0 auto;
+    border: 0;
+    padding: .7em;
+    width: 140px;
+    background: #F5F7DC;
+    font-weight: 700;
+    color: #E65F5C;
+    letter-spacing: 1px;
+    font-family: 'Roboto';
+    font-size: 1.1em;
+    text-align: center;
+    text-decoration: none;
+}
+
+.project-close {
+    position: absolute;
+    right: 30px;
+    top: 30px;
 }
