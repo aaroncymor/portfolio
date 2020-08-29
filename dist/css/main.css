@@ -152,11 +152,31 @@
 .burger-menu {
   position: fixed;
   top: 20px;
-  right: 20px;
+  right: 10px;
   cursor: pointer;
 }
 
 .burger-menu i {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 2.2rem;
+}
+
+.social-icons {
+  position: fixed;
+  top: 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  right: 10px;
+  gap: 1.2em;
+}
+
+.social-icons i {
+  cursor: pointer;
   color: rgba(255, 255, 255, 0.85);
   font-size: 2.2rem;
 }
@@ -177,7 +197,7 @@
   position: fixed;
   width: 26rem;
   height: 100%;
-  background: #353531;
+  background: #1a1a1a;
   right: -26rem;
   top: 0;
   z-index: 1000;
@@ -190,6 +210,20 @@
 }
 
 .menu-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
   list-style-type: none;
 }
 
@@ -197,9 +231,13 @@
   font-family: "Poppins", sans-serif;
   font-size: 3rem;
   text-decoration: none;
-  color: rgba(36, 36, 34, 0.4);
+  color: rgba(255, 255, 255, 0.85);
   text-transform: uppercase;
   font-weight: 700;
+}
+
+.menu-nav__link.active {
+  color: #92CDF4;
 }
 
 .profile .image-border {
@@ -234,6 +272,10 @@
 .profile__message span {
   color: #92CDF4;
   text-decoration: underline;
+}
+
+.profile__social-media {
+  display: none;
 }
 
 .profile__social-media ul {
@@ -620,6 +662,7 @@
 
 @media only screen and (min-width: 1024px) {
   .burger-menu,
+  .social-icons,
   .close-menu {
     display: none;
   }
@@ -628,23 +671,13 @@
     height: 65px;
     background: #1a1a1a !important;
     right: 0rem !important;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  .nav__logo {
-    text-decoration: none;
-    color: #fff;
-    font-weight: 700;
   }
   .menu-nav {
-    text-align: right;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    gap: 1em;
   }
   .menu-nav__item {
     display: inline-block;
@@ -672,6 +705,9 @@
   }
   .profile__intro {
     padding-top: 1em;
+  }
+  .profile__social-media {
+    display: block;
   }
   .skills {
     height: 100vh;

@@ -34,6 +34,7 @@
 @include media-lg {
 
     .burger-menu,
+    .social-icons,
     .close-menu {
         display: none;
     }
@@ -44,19 +45,12 @@
         height: 65px;
         background: #1a1a1a !important;
         right: 0rem !important;
-        display: flex;
-        justify-content: center;
-        align-items: center;
 
-        &__logo {
-            text-decoration: none;
-            color: #fff;
-            font-weight: 700;
-        }
     }
 
     .menu-nav {
-        text-align: right;
+        flex-direction: row;
+        gap: 1em;
 
         &__item {
             display: inline-block;
@@ -88,6 +82,10 @@
 
         &__intro {
             padding-top: 1em;
+        }
+
+        &__social-media {
+            display: block;
         }
     }
 

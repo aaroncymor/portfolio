@@ -1,10 +1,25 @@
 .burger-menu {
     position: fixed;
     top: 20px;
-    right: 20px;
+    right: 10px;
     cursor: pointer;
 
     i {
+        color: hsla(0,0%,100%,.85);
+        font-size: 2.2rem;
+    }
+}
+
+.social-icons {
+	position: fixed;
+	top: 200px;
+	display: flex;
+	flex-direction: column;
+	right: 10px;
+    gap: 1.2em;
+    
+    i {
+        cursor: pointer;
         color: hsla(0,0%,100%,.85);
         font-size: 2.2rem;
     }
@@ -27,7 +42,7 @@
     position: fixed;
     width: 26rem;
     height: 100%;
-    background: $primary-color;
+    background: #1a1a1a;
     right: -26rem;
     top: 0;
     z-index: 1000;
@@ -41,14 +56,24 @@
 
 
 .menu-nav {
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
     list-style-type: none;
 
     &__link {
         font-family: $primary-font;
         font-size: 3rem;
         text-decoration: none;
-        color: $optional-color-one;
+        color: hsla(0,0%,100%,.85);
         text-transform: uppercase;
         font-weight: 700;
+
+        &.active {
+            color: $optional-color-two;
+        }
     }
 }
