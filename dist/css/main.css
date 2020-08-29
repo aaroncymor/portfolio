@@ -162,8 +162,9 @@
   font-weight: 700;
 }
 
-.profile .img-border {
-  width: 17.8rem;
+.profile .image-border {
+  margin: 1rem auto;
+  width: 14.8rem;
 }
 
 .profile__img {
@@ -519,8 +520,11 @@
 
 .project-close {
   position: absolute;
-  right: 30px;
-  top: 30px;
+  font-size: 2rem;
+  text-decoration: none;
+  right: 16px;
+  top: 0;
+  color: #143642;
 }
 
 .project-image {
@@ -535,8 +539,8 @@
 }
 
 @media only screen and (min-width: 768px) {
-  .profile__img {
-    width: 17.8em;
+  .profile .image-border {
+    width: 17.8rem;
   }
   .profile .box {
     display: -webkit-box;

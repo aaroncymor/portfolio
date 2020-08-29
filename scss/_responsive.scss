@@ -1,8 +1,9 @@
 @include media-md {
 
     .profile {
-        &__img {
-            width: 17.8em;
+
+        .image-border {
+            width: 17.8rem;
         }
 
         .box {

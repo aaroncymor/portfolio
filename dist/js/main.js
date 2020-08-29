@@ -106,8 +106,8 @@ const projectCloses = document.querySelectorAll('.project-close');
 projectCloses.forEach((projectClose, index)=>{
     projectClose.addEventListener('click', (e)=>{
         e.preventDefault();
-        // project-close -> project-parent-container -> project-item
-        var projectItem = e.target.parentElement.parentElement;
+        // i -> project-close -> project-parent-container -> project-item
+        var projectItem = e.target.parentElement.parentElement.parentElement;
         document.body.style.overflow = "auto";
         projectItem.classList.remove("enter");
 
