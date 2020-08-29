@@ -84,8 +84,14 @@ projectCards.forEach((projectCard, index)=>{
         var projectItemID = e.target.parentElement.parentElement.dataset.target;
         var projectItem = document.querySelector(projectItemID);
         projectItem.style.display = "flex";
+
+        // do transition first before we hide overflow for body tag
         window.setTimeout(()=>{
             projectItem.classList.add("enter");
+        }, 100);
+
+        // set overflow to hidden for body tag to disable scrolling
+        window.setTimeout(()=>{
             document.body.style.overflow = "hidden";
         }, 300);
     });
@@ -103,9 +109,11 @@ projectCloses.forEach((projectClose, index)=>{
         // project-close -> project-parent-container -> project-item
         var projectItem = e.target.parentElement.parentElement;
         document.body.style.overflow = "auto";
+        projectItem.classList.remove("enter");
+
         window.setTimeout(()=>{
-            projectItem.classList.remove("enter");
+            projectItem.style.display = "none";
         }, 300);
-        projectItem.style.display = "none";
+
     });
 });
