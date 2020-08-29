@@ -20,21 +20,7 @@ section {
     padding: 1.5rem;
     width: 100%;
     height: 100%;
-    color: hsla(0,0%,100%,.85);//$optional-color-two;
-}
-
-.header {
-    position: fixed;
-    width: 26rem;
-    height: 100%;
-    background: $primary-color;
-    right: -26rem;
-    top: 0;
-    z-index: 1000;
-}
-
-.header.open {
-    right: 0rem;
+    color: hsla(0,0%,100%,.85);
 }
 
 .container {
@@ -44,7 +30,6 @@ section {
 }
 
 .box {
-    background-color: $optional-color-one;
     padding: 1rem 2rem;
 }
 

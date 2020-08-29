@@ -5,6 +5,19 @@ AOS.init({
 
 // setTimeout(()=>{document.body.style.overflow = "auto";}, 5000);
 
+const menuBurger = document.querySelector(".burger-menu");
+menuBurger.addEventListener('click', (e)=>{
+    e.preventDefault();
+    document.querySelector('.nav').classList.add("open");
+});
+
+const menuClose = document.querySelector(".close-menu");
+menuClose.addEventListener('click', (e)=>{
+    e.preventDefault();
+    const nav = e.target.parentElement.parentElement;
+    nav.classList.remove("open");
+});
+
 var skillIndex = 0;
 skillList = [
     '.skills__html5',

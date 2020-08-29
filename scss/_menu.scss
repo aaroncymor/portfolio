@@ -1,3 +1,45 @@
+.burger-menu {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+
+    i {
+        color: hsla(0,0%,100%,.85);
+        font-size: 2.2rem;
+    }
+}
+
+
+.close-menu {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+
+    i {
+        color: hsla(0,0%,100%,.85);
+        font-size: 2.2rem;
+    }
+}
+
+.nav {
+    position: fixed;
+    width: 26rem;
+    height: 100%;
+    background: $primary-color;
+    right: -26rem;
+    top: 0;
+    z-index: 1000;
+    transition: all 650ms;
+
+    &.open {
+
+        right: 0em;
+    }
+}
+
+
 .menu-nav {
     list-style-type: none;
 
