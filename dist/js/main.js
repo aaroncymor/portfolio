@@ -3,7 +3,18 @@ AOS.init({
     once: true
 });
 
-setTimeout(()=>{document.body.style.overflow = "auto";}, 5000);
+window.onbeforeunload = function () {
+    window.scrollTo(0, 0);
+}
+
+/**
+ * Loader Animation
+ */
+setTimeout(()=>{
+    document.body.style.overflow = "auto";
+    const loaderSection = document.querySelector('.loader');
+    loaderSection.style.display = "none";
+}, 5000);
 
 /**
  * Menu Section Animation
@@ -22,7 +33,7 @@ menuClose.addEventListener('click', (e)=>{
     nav.classList.remove("open");
 });
 
-var currNavIndex = 0;
+let currNavIndex = 0;
 const navLinks = document.querySelectorAll('.menu-nav__link');
 navLinks.forEach((navLink, index)=>{
     navLink.addEventListener('click', (e)=>{
@@ -40,12 +51,13 @@ navLinks.forEach((navLink, index)=>{
 });
 
 
-const sections = document.querySelectorAll("section");
+const sections = document.querySelectorAll("section:not(.loader)");
 // https://css-tricks.com/a-few-functional-uses-for-intersection-observer-to-know-when-an-element-is-in-view/
 if(!!window.IntersectionObserver){
     let observer = new IntersectionObserver((entries, observer)=>{
         entries.forEach(entry=>{
             if(entry.isIntersecting){
+
                 // remove active class to previous nav link
                 navLinks[currNavIndex].classList.remove("active");
 
@@ -64,6 +76,7 @@ if(!!window.IntersectionObserver){
 } else {
 
 }
+
 
 /**
  * Skills Section Animation
