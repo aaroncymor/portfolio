@@ -39,6 +39,32 @@ navLinks.forEach((navLink, index)=>{
     });
 });
 
+
+const sections = document.querySelectorAll("section");
+// https://css-tricks.com/a-few-functional-uses-for-intersection-observer-to-know-when-an-element-is-in-view/
+if(!!window.IntersectionObserver){
+    let observer = new IntersectionObserver((entries, observer)=>{
+        entries.forEach(entry=>{
+            if(entry.isIntersecting){
+                // remove active class to previous nav link
+                navLinks[currNavIndex].classList.remove("active");
+
+                // assign new value of navIndex
+                currNavIndex = entry.target.dataset.navIndex;
+
+                // add active class to current nav link
+                navLinks[currNavIndex].classList.add("active");
+            }
+        });
+    }, {threshold: .25});
+
+    sections.forEach(section=>{
+        observer.observe(section);
+    });
+} else {
+
+}
+
 /**
  * Skills Section Animation
  */
