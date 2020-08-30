@@ -854,6 +854,7 @@ body {
   background: #252525;
   font-family: "Poppins", sans-serif;
   letter-spacing: 2px;
+  overflow: hidden;
 }
 
 section {

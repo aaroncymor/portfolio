@@ -3,7 +3,7 @@ AOS.init({
     once: true
 });
 
-// setTimeout(()=>{document.body.style.overflow = "auto";}, 5000);
+setTimeout(()=>{document.body.style.overflow = "auto";}, 5000);
 
 /**
  * Menu Section Animation
