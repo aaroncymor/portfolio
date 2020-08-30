@@ -65,6 +65,9 @@
 
 .loader {
   top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
   height: 100vh;
   background-color: #000;
   position: absolute;
@@ -101,34 +104,6 @@
   left: 50%;
   top: 50%;
   margin: -1.5ch -1.5ch;
-}
-
-.loader__line1 {
-  position: absolute;
-  width: 20vw;
-  height: 1vh;
-  left: 50%;
-  top: 50%;
-  margin: -20vh -10vw;
-  background-color: white;
-}
-
-.loader__line1::after {
-  position: absolute;
-  content: '';
-  width: .5vw;
-  height: 31.1vh;
-  background-color: white;
-}
-
-.loader__line2 {
-  position: absolute;
-  width: 20vw;
-  height: 1vh;
-  left: 50%;
-  top: 50%;
-  margin: 10.1vh -10vw;
-  background-color: white;
 }
 
 @-webkit-keyframes type {
