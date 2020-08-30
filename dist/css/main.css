@@ -272,7 +272,7 @@
 
 .profile__message span {
   color: #92CDF4;
-  text-decoration: underline;
+  font-weight: 700;
 }
 
 .profile__social-media {
@@ -328,7 +328,6 @@
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  padding: 0rem 2rem;
 }
 
 .skills__title {

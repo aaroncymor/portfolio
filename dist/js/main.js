@@ -5,6 +5,10 @@ AOS.init({
 
 // setTimeout(()=>{document.body.style.overflow = "auto";}, 5000);
 
+/**
+ * Menu Section Animation
+ */
+
 const menuBurger = document.querySelector(".burger-menu");
 menuBurger.addEventListener('click', (e)=>{
     e.preventDefault();
@@ -18,6 +22,26 @@ menuClose.addEventListener('click', (e)=>{
     nav.classList.remove("open");
 });
 
+var currNavIndex = 0;
+const navLinks = document.querySelectorAll('.menu-nav__link');
+navLinks.forEach((navLink, index)=>{
+    navLink.addEventListener('click', (e)=>{
+        // remove active class to previous nav link
+        navLinks[currNavIndex].classList.remove("active");
+
+        // assign new value of navIndex
+        currNavIndex = index;
+
+        // add active class to current nav link
+        navLink.classList.add("active");
+        const nav = e.target.parentElement.parentElement.parentElement;
+        nav.classList.remove("open");
+    });
+});
+
+/**
+ * Skills Section Animation
+ */
 var skillIndex = 0;
 skillList = [
     '.skills__html5',
@@ -89,6 +113,10 @@ setInterval(()=>{
         skillIndex = 0;
     }
 }, 5000);
+
+/**
+ * Projects Section Animation
+ */
 
 const projectCards = document.querySelectorAll('.projects__card');
 projectCards.forEach((projectCard, index)=>{
